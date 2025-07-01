@@ -25,3 +25,45 @@ b {
   font-family: "Hubot Sans", sans-serif;
   color: var(--pico-color-violet-500);
 }
+
+/* Modal responsive layout */
+.modal-content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.modal-image {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.modal-text {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modal-image {
+    width: 100px;
+  }
+  
+  .modal-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px), (max-height: 600px) {
+  .modal-image {
+    display: none;
+  }
+  
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
