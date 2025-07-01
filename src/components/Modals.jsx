@@ -13,12 +13,9 @@ function Modals({ member, handleClose, handleChange }) {
             ></button>
           </header>
           <hgroup>
-            <div style={{
-              display: 'flex',
-              gap: '1rem'
-            }}>
-              <img style={{ width: '200px' }} src={`images/${member.slug}.svg`} alt={member.name} />
-              <hgroup>
+            <div className="modal-content">
+              <img className="modal-image" src={`images/${member.slug}.svg`} alt={member.name} />
+              <hgroup className="modal-text">
                 <h1>{member.name}</h1>
                 <p>{member.bio}</p>
               </hgroup>

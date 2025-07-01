@@ -1,4 +1,5 @@
 import ToggleTheme from './ToggleTheme';
+import { dropdownButtonStyle, dropdownItemStyle } from './InterfaceStyles';
 
 function Nav({ cast, onChoice }) {
   return (
@@ -11,11 +12,11 @@ function Nav({ cast, onChoice }) {
         <li><ToggleTheme /></li>
         <li>
           <details className="dropdown">
-            <summary>Cast</summary>
+            <summary style={dropdownButtonStyle}>Cast</summary>
             <ul dir="rtl">
               {cast.map(member => (
                 <li key={member.id}>
-                  <a href="#" onClick={() => { onChoice(member) }}>{member.name}</a>
+                  <a href="#" style={dropdownItemStyle} onClick={() => { onChoice(member) }}>{member.name}</a>
                 </li>
               ))}
             </ul>
